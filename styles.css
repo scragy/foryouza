@@ -152,4 +152,7 @@ h1 {
         width: 250px;
         height: 350px;
     }
+    body, .letter-content {
+        font-family: 'Poppins', sans-serif !important;
+    }
 }
