@@ -151,7 +151,7 @@ h1 {
         width: 250px;
         height: 350px;
     }
-    body, .letter-content {
+    body, .letter-content, h2, p {
         font-family: sans-serif !important;
     }
 }
