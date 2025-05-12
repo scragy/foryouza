@@ -106,7 +106,7 @@ h1 {
 }
 
 .letter-content {
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
     color: #333;
     line-height: 1.6;
 }
@@ -117,7 +117,6 @@ h1 {
 }
 
 .letter-content p {
-    font-family: 'Poppins', sans-serif;
     margin-bottom: 10px;
     font-size: 1.2rem;
 }
@@ -152,7 +151,7 @@ h1 {
         width: 250px;
         height: 350px;
     }
-    body, .letter-content, h2 {
-        font-family: 'Poppins', sans-serif !important;
+    body, .letter-content {
+        font-family: sans-serif !important;
     }
 }
