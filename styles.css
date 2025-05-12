@@ -6,7 +6,7 @@
 
 body {
     background: linear-gradient(135deg, #ffcce6, #f8e1f4, #e6f3ff);
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -106,7 +106,7 @@ h1 {
 }
 
 .letter-content {
-    font-family: 'poppins', cursive;
+    font-family: 'Poppins', cursive;
     color: #333;
     line-height: 1.6;
 }
@@ -117,6 +117,7 @@ h1 {
 }
 
 .letter-content p {
+    font-family: 'Poppins', cursive;
     margin-bottom: 10px;
     font-size: 1.2rem;
 }
