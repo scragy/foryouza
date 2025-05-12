@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ffcce6, #f8e1f4, #e6f3ff);
+    font-family: 'poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-inside {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-front {
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    color: white;
+    transform: rotateY(0deg);
+}
+
+.card-inside {
+    background: white;
+    transform: rotateY(180deg);
+    overflow: hidden;
+}
+
+.heart {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    transform: rotate(45deg);
+    margin-bottom: 30px;
+    position: relative;
+    animation: heartbeat 1.5s infinite;
+}
+
+.heart:before, .heart:after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart:before {
+    top: -30px;
+    left: 0;
+}
+
+.heart:after {
+    top: 0;
+    left: -30px;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.letter {
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+    padding: 20px;
+    position: relative;
+    overflow-y: auto;
+}
+
+.letter-content {
+    font-family: 'poppins', cursive;
+    color: #333;
+    line-height: 1.6;
+}
+
+.letter-content h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.letter-content p {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.signature {
+    margin-top: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.floating-hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes heartbeat {
+    0% { transform: rotate(45deg) scale(1); }
+    25% { transform: rotate(45deg) scale(1.1); }
+    50% { transform: rotate(45deg) scale(1); }
+    75% { transform: rotate(45deg) scale(1.1); }
+    100% { transform: rotate(45deg) scale(1); }
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    .card {
+        width: 250px;
+        height: 350px;
+    }
+}
